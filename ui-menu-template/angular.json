@@ -1,0 +1,238 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"cli": {
+		"analytics": false,
+		"packageManager": "yarn"
+	},
+	"newProjectRoot": "projects",
+	"projects": {
+		"afcui": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				},
+				"@schematics/angular:application": {
+					"strict": true
+				}
+			},
+			"root": "projects/afcui",
+			"sourceRoot": "projects/afcui/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/afcui",
+						"index": "projects/afcui/src/index.html",
+						"main": "projects/afcui/src/main.ts",
+						"polyfills": "projects/afcui/src/polyfills.ts",
+						"tsConfig": "projects/afcui/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/afcui/src/favicon.ico",
+							"projects/afcui/src/assets"
+						],
+						"styles": [
+							"projects/afcui/src/styles.scss"
+						],
+						"scripts": [],
+						"extraWebpackConfig": "projects/afcui/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"fileReplacements": [
+								{
+									"replace": "projects/afcui/src/environments/environment.ts",
+									"with": "projects/afcui/src/environments/environment.prod.ts"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/afcui/webpack.prod.config.js"
+						},
+						"development": {
+							"buildOptimizer": false,
+							"optimization": false,
+							"vendorChunk": true,
+							"extractLicenses": false,
+							"sourceMap": true,
+							"namedChunks": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"browserTarget": "afcui:build:production",
+							"extraWebpackConfig": "projects/afcui/webpack.prod.config.js"
+						},
+						"development": {
+							"browserTarget": "afcui:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4200,
+						"publicHost": "http://localhost:4200",
+						"extraWebpackConfig": "projects/afcui/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"browserTarget": "afcui:build",
+						"extraWebpackConfig": "projects/afcui/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "ngx-build-plus:karma",
+					"options": {
+						"main": "projects/afcui/src/test.ts",
+						"polyfills": "projects/afcui/src/polyfills.ts",
+						"tsConfig": "projects/afcui/tsconfig.spec.json",
+						"karmaConfig": "projects/afcui/karma.conf.js",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/afcui/src/favicon.ico",
+							"projects/afcui/src/assets"
+						],
+						"styles": [
+							"projects/afcui/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+		},
+		"bankreconui": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				},
+				"@schematics/angular:application": {
+					"strict": true
+				}
+			},
+			"root": "projects/bankreconui",
+			"sourceRoot": "projects/bankreconui/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/bankreconui",
+						"index": "projects/bankreconui/src/index.html",
+						"main": "projects/bankreconui/src/main.ts",
+						"polyfills": "projects/bankreconui/src/polyfills.ts",
+						"tsConfig": "projects/bankreconui/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/bankreconui/src/favicon.ico",
+							"projects/bankreconui/src/assets"
+						],
+						"styles": [
+							"projects/bankreconui/src/styles.scss"
+						],
+						"scripts": [],
+						"extraWebpackConfig": "projects/bankreconui/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "2kb",
+									"maximumError": "4kb"
+								}
+							],
+							"fileReplacements": [
+								{
+									"replace": "projects/bankreconui/src/environments/environment.ts",
+									"with": "projects/bankreconui/src/environments/environment.prod.ts"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/bankreconui/webpack.prod.config.js"
+						},
+						"development": {
+							"buildOptimizer": false,
+							"optimization": false,
+							"vendorChunk": true,
+							"extractLicenses": false,
+							"sourceMap": true,
+							"namedChunks": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"browserTarget": "bankreconui:build:production",
+							"extraWebpackConfig": "projects/bankreconui/webpack.prod.config.js"
+						},
+						"development": {
+							"browserTarget": "bankreconui:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4300,
+						"publicHost": "http://localhost:4300",
+						"extraWebpackConfig": "projects/bankreconui/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"browserTarget": "bankreconui:build",
+						"extraWebpackConfig": "projects/bankreconui/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "ngx-build-plus:karma",
+					"options": {
+						"main": "projects/bankreconui/src/test.ts",
+						"polyfills": "projects/bankreconui/src/polyfills.ts",
+						"tsConfig": "projects/bankreconui/tsconfig.spec.json",
+						"karmaConfig": "projects/bankreconui/karma.conf.js",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							"projects/bankreconui/src/favicon.ico",
+							"projects/bankreconui/src/assets"
+						],
+						"styles": [
+							"projects/bankreconui/src/styles.scss"
+						],
+						"scripts": []
+					}
+				}
+			}
+		}
+	},
+	"defaultProject": "afcui"
+}
