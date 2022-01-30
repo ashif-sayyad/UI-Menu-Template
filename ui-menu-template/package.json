@@ -10,6 +10,9 @@
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
+  "resolutions": {
+    "webpack": "^5.0.0"
+  },
   "dependencies": {
     "@angular-architects/module-federation": "14.0.1",
     "@angular/animations": "~13.2.0",
@@ -37,6 +40,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ngx-build-plus": "13.0.1",
     "typescript": "~4.5.2"
   }
 }

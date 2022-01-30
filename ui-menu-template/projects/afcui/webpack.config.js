@@ -36,9 +36,12 @@ module.exports = {
         // },        
         
         // For hosts (please adjust)
-        remotes: {
-            "bankreconui": "http://localhost:4300/remoteEntry.js",
+        // remotes: {
+        //     "bankreconui": "http://localhost:4300/remoteEntry.js",
 
+        // },
+        remotes: {
+          "bankreconui": "http://localhost:4300/remoteEntry.js",
         },
 
         shared: share({

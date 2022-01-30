@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  RemoteEntryUrl: 'http://localhost:4300/bankreconuiRemoteEntry.js'
+  RemoteEntryUrl: 'http://localhost:4300/remoteEntry.js'
 };
 
 /*

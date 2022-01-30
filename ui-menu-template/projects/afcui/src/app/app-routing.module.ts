@@ -13,11 +13,7 @@ const routes: Routes = [
     {
         path: 'todo',
         loadChildren: () =>
-            loadRemoteModule({
-                type: 'module',
-                remoteEntry: environment.RemoteEntryUrl,
-                exposedModule: './Module'
-            }).then(m => m.TodoModule)
+        import('bankreconui/Module').then(m => m.TodoModule),
     },
 ];
 

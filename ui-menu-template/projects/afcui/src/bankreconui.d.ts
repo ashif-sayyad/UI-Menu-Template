@@ -1,1 +1,1 @@
-declare module 'bankreconui/TodoModule'
+declare module 'bankreconui/Module'

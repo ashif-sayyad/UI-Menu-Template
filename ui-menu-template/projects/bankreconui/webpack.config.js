@@ -30,10 +30,10 @@ module.exports = {
 
         // For remotes (please adjust)
         name: "bankreconui",
-        filename: "bankreconuiRemoteEntry.js",
+        filename: "remoteEntry.js",
         exposes: {
             //'./Component': './projects/bankreconui/src/app/app.component.ts',
-            './TodoModule': './projects/bankreconui/src/app/todo/todo.module.ts',
+            './Module': './projects/bankreconui/src/app/todo/todo.module.ts',
         },        
         
         // For hosts (please adjust)
